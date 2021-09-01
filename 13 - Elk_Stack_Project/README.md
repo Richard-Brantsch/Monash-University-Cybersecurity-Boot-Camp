@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![C:\Users\richa\Documents\Monash University Cybersecurity Boot Camp\13 - Elk_Stack_Project\.network_diagrams\.diagram_jbp_elk.png](Images/diagram_filename.png)
+![Monash University Cybersecurity Boot Camp\13 - Elk_Stack_Project\.network_diagrams\.diagram_jbp_elk.png](Images/diagram_filename.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
