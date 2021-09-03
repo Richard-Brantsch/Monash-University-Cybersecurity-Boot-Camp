@@ -220,7 +220,7 @@ Notes:
     become: true
     tasks:
 ````
-**Running Playbooks**
+- **Running Playbooks**
 
   - `ansible-playbook metricbeat-playbook.yml`
   - `ansible-playbook filebeat-playbook.yml`
