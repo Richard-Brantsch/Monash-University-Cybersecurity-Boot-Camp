@@ -190,14 +190,15 @@ Check that the ELK Server is running by visiting the Kibana URL http://104.41.16
 Notes:
 
 - **Download and Installation in one step!**
+````
   - name: DOWNLOAD METRICBEAT AND INSTALL METRICBEAT
     apt: 
       deb: "https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.14.0-amd64.deb"
       state: present
-
+````
 
 - **Change IP to 10.0.0.4 for setup.kibana and output.elasticsearch (connecting our webVM's to the ELK server), this saves us from downloading the filebeat-config.yml and metricbeat-config.yml to the Ansible Control Node and dropping it into the WEB-Servers**
-
+````
   - name: Update setup.kibana in /etc/metricbeat/metricbeat.yml
     replace:
       path: /etc/metricbeat/metricbeat.yml
@@ -211,24 +212,27 @@ Notes:
       regexp: '(\s+)hosts: \["localhost:9200"\](\s+.*)?$'
       replace: '\1hosts: ["10.0.0.4:9200"]\2'
       backup: yes
-
+````
 - **Specify on what Machine to install Metricbeat**
+````
   - name: INSTALL METRICBEAT
     hosts: webservers 
     become: true
     tasks:
-
+````
 **Running Playbooks**
+
   - `ansible-playbook metricbeat-playbook.yml`
   - `ansible-playbook filebeat-playbook.yml`
 
 - **Specify on what Machine to install ELK Server**
+````
   - name: CONFIGURE ELK VM WITH DOCKER
     hosts: elkservers
     remote_user: RBcyber2021
     become: true
     tasks:
-
+````
 - **Which file is the playbook?**
   - [Metricbeat Playbook](.yaml-playbooks/metricbeat-playbook.yml)
   - [Filebeat Playbook](.yaml-playbooks/filebeat-playbook.yml)  
