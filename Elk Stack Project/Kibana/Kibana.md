@@ -26,7 +26,7 @@
 
         ![](Images/India.png)
 
-        ![](Images/india-unique.png)
+        ![](Images/india-unique.PNG)
 
     - In the last 24 hours, of the visitors from China, how many were using Mac OSX?
 
