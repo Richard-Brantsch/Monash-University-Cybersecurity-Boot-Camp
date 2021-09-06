@@ -129,7 +129,7 @@ The playbook implements the following tasks:
 ````
 
 
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance. See [docker_ps_output](.images/docker_ps_output.png)
+The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![docker_ps_output.png](Scripts\Ansible\Images\docker_ps_output.png)
 
