@@ -89,7 +89,7 @@
       
         - **Answer:** The time filter shows Sep 6, 2021 @ 12:55:00.00 -> Sep 6, 2021 @ 13:00:00.00. The time stamp is 12:57:30.
 
-     ![](Images/Time-Stamp.png)
+     ![](Images/Time-stamp.png)
 
      ![](Images/time-stamp2.png)
 
