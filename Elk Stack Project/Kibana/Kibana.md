@@ -32,7 +32,7 @@
 
        - **Answer:** 14
 
-        ![](Images/china-osx.png)
+        ![](Images/china-osx.PNG)
 
     - In the last 2 days, what percentage of visitors received 404 errors? How about 503 errors?
 
