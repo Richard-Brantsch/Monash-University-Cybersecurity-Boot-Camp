@@ -187,7 +187,17 @@ Next run the Playbooks with following command:
 Check that the ELK Server is running by visiting the Kibana URL http://104.41.167.24:5601/app/kibana#/home
 - 104.41.167.24 is the Elk server’s Public IP and 5601 is the Port it connects to.
 
-Notes:
+
+
+### Exploring Kibana
+
+Now that we have a working instance of Kibana, we will demonstrate a bit about how to use it.
+
+The following walkthrough provides a quick overview of using Kibana. Click > [Kibana Walkthrough](Kibana\Exploring Kibana.md) to review the Activity.
+
+
+
+**Notes:**
 
 - **Download and Installation in one step!**
 ````
