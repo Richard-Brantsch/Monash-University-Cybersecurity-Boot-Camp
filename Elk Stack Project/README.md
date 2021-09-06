@@ -193,7 +193,7 @@ Check that the ELK Server is running by visiting the Kibana URL http://104.41.16
 
 Now that we have a working instance of Kibana, we will demonstrate a bit about how to use it.
 
-The following walkthrough provides a quick overview of using Kibana. Click > [Kibana Walkthrough](Kibana\Exploring-Kibana.md) to review the Activity.
+The following walkthrough provides a quick overview of using Kibana. Click > [Kibana Walkthrough](Kibana\Kibana.md) to review the Activity.
 
 
 
