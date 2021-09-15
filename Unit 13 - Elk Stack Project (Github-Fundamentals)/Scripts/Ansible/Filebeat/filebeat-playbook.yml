@@ -1,0 +1,35 @@
+---
+- name: INSTALLING AND STARTING FILEBEAT
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: DOWNLOAD AND INSTALL FILEBEAT
+      apt:
+        deb: "https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.13.2-amd64.deb"
+        state: present
+
+    - name: UPDATE SETUP.KIBANA IN /ETC/FILEBEAT/FILEBEAT.YML
+      replace:
+        path: /etc/filebeat/filebeat.yml
+        regexp: '(\s+)#host: "localhost:5601"(\s+.*)?$'
+        replace: '\1host: "10.0.0.4:5601"\2'
+        backup: yes
+
+    - name: UPDATE OUTPUT.ELASTICSEARCH IN /ETC/FILEBEAT/FILEBEAT.YML
+      replace:
+        path: /etc/filebeat/filebeat.yml
+        regexp: '(\s+)hosts: \["localhost:9200"\](\s+.*)?$'
+        replace: '\1hosts: ["10.0.0.4:9200"]\2'
+        backup: yes
+
+    - name: ENABLE AND CONFIGURE SYSTEM MODULE
+      command: sudo filebeat modules enable system
+
+    - name: SETUP FILEBEAT
+      command: sudo filebeat setup
+
+    - name: ENABLE SERVICE FILEBEAT ON BOOT
+      systemd:
+        name: filebeat
+        state: started
+        enabled: yes
