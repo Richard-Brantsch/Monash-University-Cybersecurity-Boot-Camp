@@ -26,13 +26,13 @@
 
         ![](Images/India.png)
 
-        ![](Images/india-unique.PNG)
+        ![](Images/india-unique.png)
 
     - In the last 24 hours, of the visitors from China, how many were using Mac OSX?
 
        - **Answer:** 14
 
-        ![](Images/china-osx.PNG)
+        ![](Images/china-osx.png)
 
     - In the last 2 days, what percentage of visitors received 404 errors? How about 503 errors?
 
