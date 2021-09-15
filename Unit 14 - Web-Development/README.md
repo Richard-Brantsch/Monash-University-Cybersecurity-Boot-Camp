@@ -15,7 +15,7 @@ Answer the following questions about the HTTP request and response process.
 
 2. What are the different parts of an HTTP request?
     - <span style="color: blue">An HTTP request is divided into three parts: request line, header and body. A cycle of requests and responses between clients and servers.</span>
- 
+
 
 3. Which part of an HTTP request is optional?'
     - <span style="color: blue">The request body.</span>
@@ -103,7 +103,7 @@ Answer the following questions about sessions and cookies:
     Cookie: cart=Bob
     ```
     <span style="color: blue">Answer: The `Cookie` request header sends the `cart=Bob` cookie along with the GET request.</span>
- 
+
     ````HTTP
     Cookie: cart=Bob
     ````
@@ -137,7 +137,7 @@ username=Barbara&password=password
 
 19. Does the request have a user session associated with it?
     - <span style="color: blue">No `Cookie` header is set, this indicates that there is no user associated with the request.</span>
- 
+
 
 20. What kind of data is being sent from this request body?
     - <span style="color: blue">It is an authentification request at the pages `/login.php` at the bottom we can also see `username=Barbara&password=password`.</span>
@@ -166,7 +166,7 @@ X-XSS-Protection: 1; mode=block
 
 21. What is the response status code?
     - <span style="color: green">`200 OK `</span>
- 
+
 
 22. What web server is handling this HTTP response?
      - <span style="color: blue">`Apache`</span>
@@ -240,10 +240,10 @@ Answer the following questions about multi-container deployment:
     - <span style="color: blue">You never want to run `DELETE FROM employees;` as it will delete the entire `employees`  table! </span>
 
     
-      
+    
 
 ---
 **References**
 
-[HTTP Reference Sheet](./HTTP_Reference.md)
-[curl Reference Sheet](./cURL_Reference.md)
+- [HTTP Reference Sheet](./HTTP_Reference.md)
+- [curl Reference Sheet](./cURL_Reference.md)
