@@ -245,5 +245,6 @@ Answer the following questions about multi-container deployment:
 ---
 **References**
 
-- [HTTP Reference Sheet](./HTTP_Reference.md)
-- [curl Reference Sheet](./cURL_Reference.md)
+- [HTTP Reference Sheet](Reference/HTTP_Reference.md)
+- [curl Reference Sheet](Reference/cURL_Reference.md)
+
