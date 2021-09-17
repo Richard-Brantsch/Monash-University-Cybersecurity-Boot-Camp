@@ -50,8 +50,10 @@
 
 6. Now we test if we can manipulate the input to cause an unintended result. To do so we run the same command as before, the only difference is that we add  two ampersands and `pwd`.
    - Type `8.8.8.8 && pwd` in search field.
+   
      ![](./Images/pwd.png)
       This type of injection attack is called **Command Injection**, and it is dependent on the web application taking user input to run a command against an operating system.
+   
    - This command shows us that we are in `/var/www/html/vulnerabilities/exec`.
 
 
