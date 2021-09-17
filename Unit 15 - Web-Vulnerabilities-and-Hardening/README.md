@@ -66,27 +66,25 @@
 
      
 
-     ---
+---
 
-     **Solution**
+**Solution** Input `8.8.8.8 && cat ../../../../../etc/hosts` to display the contents of the hosts file.
 
-     Input `8.8.8.8 && cat ../../../../../etc/hosts` to display the contents of the hosts file.
+-  [Solution (/etc/hosts)](./Images/hosts.png)
 
-     -  [Solution (/etc/hosts)](./Images/hosts.png)
+Input `8.8.8.8 && cat ../../../../../etc/passwd` to display the contents of the  passwd file.
 
-     Input `8.8.8.8 && cat ../../../../../etc/passwd` to display the contents of the  passwd file.
+- [Solution (/etc/passwd)](./Images/passwd.png)
 
-     - [Solution (/etc/passwd)](./Images/passwd.png)
 
-     
 
-     **Mitigation**
+**Mitigation**
 
-     Applications should run using the lowest privileges that are required to accomplish the necessary tasks. If possible, create isolated accounts with limited privileges that are only used for a single task. Avoid calling OS commands directly. Built-in library functions are a very good alternative to OS Commands, as they cannot be manipulated to  perform tasks other than those it is intended to do. Make sure you stay up-to-date with patches and updates. Additionally, you can use a web application firewall (WAF), which can  block suspicious traffic that may include attempted command injection. One of the simplest and most effective ways to prevent command  injections is to scan your application with a dynamic application  security testing (DAST) tool like Neuralegion’s Nexploit. 
+Applications should run using the lowest privileges that are required to accomplish the necessary tasks. If possible, create isolated accounts with limited privileges that are only used for a single task. Avoid calling OS commands directly. Built-in library functions are a very good alternative to OS Commands, as they cannot be manipulated to  perform tasks other than those it is intended to do. Make sure you stay up-to-date with patches and updates. Additionally, you can use a web application firewall (WAF), which can  block suspicious traffic that may include attempted command injection. One of the simplest and most effective ways to prevent command  injections is to scan your application with a dynamic application  security testing (DAST) tool like Neuralegion’s Nexploit. 
 
-     ---
+---
 
-     
+
 
 ### Web Application 2: *A Brute Force to Be Reckoned With*
 
@@ -112,9 +110,9 @@
 
 (*) This page is an administrative web application that serves as a simple login page. An administrator enters their username and password and selects Login.
 
-- If the user/password combination is correct, it will return a successful message.
+​			If the user/password combination is correct, it will return a successful message.
 
-- If the user/password combination is incorrect, it will return the message, "Invalid credentials."
+​			If the user/password combination is incorrect, it will return the message, "Invalid credentials."
 
 
 
