@@ -327,7 +327,7 @@ Lastly we want to extract the Geolocation from the users [Get Geolocation (Third
 
 **Social Engineering Attacks**
 
-- It’s important to train your staff so that they : Understand the consequences of social engineering attacks; Don’t open suspicious email attachments; Think before providing sensitive information (no one legitimate will ever ask you for your password, for instance); Beware of clickjacking (be suspicious of everything you click on and let your mouse hover over links to check where they’re pointing to) and many more important prevention techniques. 
+- It’s important to **train your staff** so that they : Understand the consequences of social engineering attacks; Don’t open suspicious email attachments; Think before providing sensitive information (no one legitimate will ever ask you for your password, for instance); Beware of clickjacking (be suspicious of everything you click on and let your mouse hover over links to check where they’re pointing to) and many more important prevention techniques. 
 
 - As well as training your staff, it’s important to test the effectiveness of your training measures. **Simulated phishing attacks** will give you a good idea of your employees’ susceptibility to phishing emails.
 
