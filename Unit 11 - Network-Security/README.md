@@ -1,4 +1,4 @@
-### Week 11 Homework Submission File: Network Security Homework 
+### Week 11 Homework Submission File: Network Security 
 
 ### Part 1: Review Questions 
 
