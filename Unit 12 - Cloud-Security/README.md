@@ -1,4 +1,4 @@
-### Week 12 Homework Submission File: Cloud Security Homework
+### Week 12 Homework Submission File: Cloud Security
 
 
 
