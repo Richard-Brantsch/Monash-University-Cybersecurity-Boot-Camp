@@ -1,13 +1,22 @@
+
+
+### Week 10 Homework Submission File: Cryptography Homework
+
+
+
 **RIDDLE 1**
+
 - I used https://cryptii.com/pipes/caesar-cipher with the -8 SHIFT pattern to determine the answer.
-- **Answer 1** =  **6skd8s**
+
+  > **Answer 1** =  **6skd8s**
 
 
 
 **RIDDLE 2**
 
 - I used CyberChef From Binary converter to determine the answer.
-- **Answer 2** =  **cy8snd2**
+
+  > **Answer 2** =  **cy8snd2**
 
 
 
@@ -21,7 +30,8 @@
 - Step 2 = Decrypted with openssl.
     - Run - `openssl enc -pbkdf2 -nosalt -aes-256-cbc -in RIDDLE_3 -d -base64 -K 5284A3B154D99487D9D8D8508461A478C7BEB67081A64AD9A15147906E8E8564 -iv 1907C5E255F7FC9A6B47B0E789847AED`
 
-- **Answer** = **ud6s98n**
+    > **Answer** = **ud6s98n**
+    
 
 
 
@@ -33,7 +43,8 @@
     - N * 2 for Asymmetric (N = Individuals )
     - (N * (N-1)) / 2 for Symmetric (N = Individuals )
 - Part 4 = Alice's Public Key
-- **Answer** = **7gsn3nd2**
+
+    > **Answer** = **7gsn3nd2**
 
 
 
@@ -53,7 +64,8 @@
 - Step 4 = Preview the solved file.
     - Run - `cat RIDDLE_5_SOLVED`
 
-- **Answer** = **ajy39d2**
+    > **Answer** = **ajy39d2**
+    
 
 
 
@@ -69,7 +81,8 @@
     - Run - `cat code_is_inside_this_file.txt`
         - Submit the secret code: `mcclane`
 
-- **Answer** = **7skahd6**
+    > **Answer** = **7skahd6**
+    
 
 
 
