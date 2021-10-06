@@ -1,7 +1,7 @@
-<p align="Center"><span style="font-family:calibri light; font-size: 30pt;">GOODSECURITY PENETRATION TEST REPORT 
+<p align="Center"><span style="font-family:calibri light;">GOODSECURITY PENETRATION TEST REPORT 
 </span>
 
-***
+
 <p align="Center"><span style="font-family:calibri light; font-size: 30pt;">Richard.Brantsch@GoodSecurity.com</span>
 
 <p align="Center"><span style="font-family:calibri light; font-size: 30pt;">27 September 2021
@@ -52,10 +52,8 @@ Utilizing this exploit makes it possible to execute remote code simply using the
 <br/>
 CVSS 7.5 High
 <br/><br/>
-<b>Proof of Concept:</b>
+<p align="center"; style="font-size: 25pt"><b>Proof of Concept:</b></p>
 </span>
-
-
 
 
 
