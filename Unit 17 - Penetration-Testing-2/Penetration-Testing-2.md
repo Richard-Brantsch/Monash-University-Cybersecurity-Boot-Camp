@@ -4,15 +4,22 @@
 ***
 <p align="Center"><span style="font-family:calibri light; font-size: 30pt;">Richard.Brantsch@GoodSecurity.com</span>
 
-<p align="Center"><span style="font-family:calibri light; font-size: 30pt;">27 September 2021</span>
-
-
-
-
-
-
-
-
+<p align="Center"><span style="font-family:calibri light; font-size: 30pt;">27 September 2021
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</span>
 
 <p align="Center"><span style="font-family:calibri light; font-size: 25pt;">High-Level Summary</span>
 
@@ -44,7 +51,7 @@ Utilizing this exploit makes it possible to execute remote code simply using the
 <p align="Center"><span style="font-family:calibri light; font-size: 11pt;"><b>Severity:</b>
 <br/>
 CVSS 7.5 High
-<br/>
+<br/><br/>
 <b>Proof of Concept:</b>
 </span>
 
