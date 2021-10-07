@@ -15,7 +15,7 @@ I have been provided the following reports.
 
 #### I had to complete the following worksheets as I navigated through the reports. 
 
-* [Worksheet 1: Symantec](1. Symantec Internet Security Threat Report Worksheet.docx) 
-* [Worksheet 2: Akamai](2. Akamai Security Report Worksheet.docx) 
-* [Worksheet 3: Verizon](3. Verizon Report Worksheet.docx)
+* [Worksheet 1: Symantec](Symantec_Internet_Security_Threat_Report_Worksheet.pdf)
+* [Worksheet 2: Akamai](Akamai_Security_Report_Worksheet.pdf)
+* [Worksheet 3: Verizon](Verizon_Report_Worksheet.pdf)
 
