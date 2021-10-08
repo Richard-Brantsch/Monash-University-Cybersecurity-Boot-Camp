@@ -2,6 +2,8 @@
 
 
 
+
+
 ### Step 1: Create, Extract, Compress, and Manage tar Backup Archives
 
 1. Command to **extract** the `TarDocs.tar` archive to the current directory:	
