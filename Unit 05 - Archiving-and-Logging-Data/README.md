@@ -1,9 +1,5 @@
 ## Week 5 Homework Submission File: Archiving and Logging Data
 
-Please edit this file by adding the solution commands on the line below the prompt.
-
-Save and submit the completed file for your homework submission.
-
 ---
 
 ### Step 1: Create, Extract, Compress, and Manage tar Backup Archives
