@@ -1,6 +1,6 @@
 ## Week 5 Homework Submission File: Archiving and Logging Data
 
----
+
 
 ### Step 1: Create, Extract, Compress, and Manage tar Backup Archives
 
