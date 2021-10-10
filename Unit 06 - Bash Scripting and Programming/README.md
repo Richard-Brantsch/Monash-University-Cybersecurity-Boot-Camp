@@ -69,6 +69,7 @@
     - `sudo su`
     - `john /etc/shadow`
 
+
     ```bash
     Created directory: /root/.john
     Loaded 8 password hashes with 8 different salts (crypt, generic crypt(3) [?/64])
