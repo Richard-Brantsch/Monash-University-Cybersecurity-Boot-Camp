@@ -14,7 +14,7 @@ You are to report back all your findings to both the SOC manager and the Enginee
 
 This week, you will work on your final project by completing the following tasks individually:
 
-- **[Defensive Security](./Defensive-Blue Team Summary of Operations.md)**: Implement alerts and thresholds you determined would be effective in Project 2.
+- **[Defensive Security](https://github.com/Richard-Brantsch/Monash-University-Cybersecurity-Boot-Camp/blob/main/Unit%2024%20-%20Final%20Project/Defensive-Blue%20Team%20Summary%20of%20Operations.md)**: Implement alerts and thresholds you determined would be effective in Project 2.
 
 - **[Offensive Security](./Offensive-Red Team Summary of Operations.md)**: Assess a vulnerable VM and verify that the Kibana rules work as expected.
 
