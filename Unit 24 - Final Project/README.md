@@ -14,15 +14,15 @@ You are to report back all your findings to both the SOC manager and the Enginee
 
 This week, you will work on your final project by completing the following tasks individually:
 
-- **[Defensive Security](Defensive-Blue Team Summary of Operations.md)**: Implement alerts and thresholds you determined would be effective in Project 2.
+- **[Defensive Security](./Defensive-Blue Team Summary of Operations.md)**: Implement alerts and thresholds you determined would be effective in Project 2.
 
-- **[Offensive Security](Offensive-Red Team Summary of Operations.md)**: Assess a vulnerable VM and verify that the Kibana rules work as expected.
+- **[Offensive Security](./Offensive-Red Team Summary of Operations.md)**: Assess a vulnerable VM and verify that the Kibana rules work as expected.
 
-- **[Network Forensics](Network Forensic Analysis Report.md)**: Use Wireshark to analyze live malicious traffic on the wire.
+- **[Network Forensics](./Network Forensic Analysis Report.md)**: Use Wireshark to analyze live malicious traffic on the wire.
 
 
 
 ### Final Presentation
 
-- [Offensive Final Project Presentation Template ](Offensive Final Project Presentation.pdf)
+- [Offensive Final Project Presentation Template ](./Offensive Final Project Presentation.pdf)
 
